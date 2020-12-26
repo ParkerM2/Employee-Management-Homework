@@ -1,34 +1,36 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import API from "./../utils/API";
 import SearchResults from "../components/SearchResults";
 import Container from "../components/Container";
 // import Row from "../components/Row";
 // import Col from "../components/Col";
 // import Card from "../components/Card";
-import SearchForm from "../components/SearchForm";
-import Alert from "../components/Alert"
+// import SearchForm from "../components/SearchForm";
+// import Alert from "../components/Alert"
 // import UserInfo from "../components/UserInfo";
 
 const Search = props => {
 
-  const [user, setUser] = useState({
-    user: [],
-  })
-  const [userImg, setUserImg] = useState({
-    userImg: [],
-  })
-  const [userGender, setUserGender] = useState({
-    userGender: [],
-  })
+  const [user, setUser] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  
   // When the component mounts, get a list of all available base breeds and update this.state.breeds
   useEffect(() => {
-    console.log("useEffect runs")
-    API.getUserList()
-      .then(res => console.log(`This is api repsonse`, res.data))
-      .then(res => setUser({user: res.data}))
-      .catch(err => console.log(err));
-  },[])
+    console.log("use effect runs")
+    getRandomUsers()
+  }, [])
 
+  // make the api call for the list of users
+  const getRandomUsers = async () => {
+    const response = await API.getUserList()
+    console.log(response.data.results)
+    setUser(response.data.results)
+  }
+
+    
+  const Console = () => {
+    console.log(user.user)
+  }
   // const handleInputChange = event => {
   //   this.setState({ search: event.target.value });
   // };
@@ -48,15 +50,9 @@ const Search = props => {
     return (
       <div>
         <Container style={{ minHeight: "80%" }}>
-          <h1 className="text-center">Search By Breed!</h1>
-          <h1>{user.user}</h1>
-        
-          {/* <SearchForm
-            handleFormSubmit={this.handleFormSubmit}
-            handleInputChange={this.handleInputChange}
-            breeds={this.state.breeds}
-          /> */}
-          {/* <SearchResults user={user} userImg={userImg} userGender={userGender} /> */}
+          <h1 className="text-center">Employee Directory</h1>
+          <button onClick={Console}>Click Me</button>
+          <SearchResults result={user} />
         </Container>
       </div>
     );
