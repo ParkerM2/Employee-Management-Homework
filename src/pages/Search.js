@@ -7,6 +7,8 @@ import Container from "../components/Container";
 const Search = props => {
 
   const [user, setUser] = useState([])
+  const [females, setFemales] = useState([])
+  const [males, setMales] = useState([])
  
   // calls api call when page loads and sets state
   useEffect(() => {
@@ -22,27 +24,15 @@ const Search = props => {
   }
  
   const filterGenderFemale = async () => {
-    refresh();
-    const response = await API.getUserList()
-    const data = await response.data.results
-    const females = data.filter(res => res.gender === "female");
+    const females = user.filter(res => res.gender === "female");
     console.log(females)
-    setUser(females)
+    setFemales(females)
   }
 
   const filterGenderMale = async () => {
-    refresh();
-    const response = await API.getUserList()
-    const data = await response.data.results
-    const males = data.filter(res => res.gender === "male");
+    const males = user.filter(res => res.gender === "male");
     console.log(males)
-    setUser(males)
-  }
-
-  const refresh = async () => {
-    const response = await API.getUserList()
-    console.log(response.data.results)
-    setUser(response.data.results)
+    setMales(males)
   }
 
   return (
