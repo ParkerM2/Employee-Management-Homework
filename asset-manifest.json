@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Employee-Management-Homework/static/css/main.9a30bc08.chunk.css",
+    "main.js": "/Employee-Management-Homework/static/js/main.a90824c7.chunk.js",
+    "main.js.map": "/Employee-Management-Homework/static/js/main.a90824c7.chunk.js.map",
+    "runtime-main.js": "/Employee-Management-Homework/static/js/runtime-main.ecbbd55b.js",
+    "runtime-main.js.map": "/Employee-Management-Homework/static/js/runtime-main.ecbbd55b.js.map",
+    "static/css/2.e4510fa4.chunk.css": "/Employee-Management-Homework/static/css/2.e4510fa4.chunk.css",
+    "static/js/2.e480f5db.chunk.js": "/Employee-Management-Homework/static/js/2.e480f5db.chunk.js",
+    "static/js/2.e480f5db.chunk.js.map": "/Employee-Management-Homework/static/js/2.e480f5db.chunk.js.map",
+    "index.html": "/Employee-Management-Homework/index.html",
+    "static/css/2.e4510fa4.chunk.css.map": "/Employee-Management-Homework/static/css/2.e4510fa4.chunk.css.map",
+    "static/css/main.9a30bc08.chunk.css.map": "/Employee-Management-Homework/static/css/main.9a30bc08.chunk.css.map",
+    "static/js/2.e480f5db.chunk.js.LICENSE.txt": "/Employee-Management-Homework/static/js/2.e480f5db.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ecbbd55b.js",
+    "static/css/2.e4510fa4.chunk.css",
+    "static/js/2.e480f5db.chunk.js",
+    "static/css/main.9a30bc08.chunk.css",
+    "static/js/main.a90824c7.chunk.js"
+  ]
+}
